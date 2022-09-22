@@ -7,6 +7,6 @@ so ~/.config/nvim/mappings.vim
 so ~/.config/nvim/theme.vim
 
 autocmd VimEnter *
-    \     if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-    \|        PlugInstall --sync | q | rewind
-    \|    endif
+    \ if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+    \|  PlugInstall --sync | q | rewind
+    \|endif
