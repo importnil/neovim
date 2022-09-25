@@ -7,8 +7,8 @@ require('mappings')
 require('theme')
 
 vim.cmd [[
-VimEnter *
-    \ if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-    \|  PlugInstall --sync | q | rewind
-    \|endif
+  VimEnter *
+      \ if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+      \|  PlugInstall --sync | q | rewind
+      \|endif
 ]]
