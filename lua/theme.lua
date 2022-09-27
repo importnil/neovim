@@ -11,4 +11,5 @@ vim.cmd [[
   hi Visual guibg=#5974ab guifg=#ffffff
   hi MatchParen guibg=#99ccff
   hi String guifg=#008005 gui=bold
+  hi! default link CmpItemKind CmpItemMenuDefault
 ]]
