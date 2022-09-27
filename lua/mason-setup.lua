@@ -11,25 +11,21 @@ require('mason').setup({
 
 require('mason-tool-installer').setup {
     ensure_installed = {
+	{ 'lua-language-server' },
         { 'golangci-lint', version = 'v1.47.3' },
+	{ 'golangci-lint-langserver' },
+	{ 'gopls' },
+	{ 'rust-analyzer' },
+	{ 'eslint-lsp' },
+	{ 'vim-language-server' },
+	{ 'json-lsp' },
+	{ 'yaml-language-server'},
     },
     auto_update = true,
     run_on_start = true,
 }
 
-require('mason-lspconfig').setup({
-    automatic_installation = true,
-    ensure_installed = {
-        'sumneko_lua',
-        'golangci_lint_ls',
-        'gopls',
-        'rust_analyzer',
-        'eslint',
-        'vimls',
-        'json-lsp',
-        'yaml-language-server',
-    },
-})
+require('mason-lspconfig').setup {}
 
 -- General LSP configuration.
 local lsp_defaults = {
