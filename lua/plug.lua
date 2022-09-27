@@ -1,6 +1,6 @@
 local Plug = vim.fn['plug#']
 
-vim.fn.has('plug#begin')
+vim.call('plug#begin', '~/.config/nvim/plugged')
 
 -- Mason and stuff.
 Plug 'williamboman/mason.nvim'
@@ -27,7 +27,7 @@ Plug 'windwp/nvim-autopairs'
 Plug 'rrethy/vim-illuminate'
 
 -- Snippets.
-Plug('L3MON4D3/LuaSnip', { ['tag'] = 'v<CurrentMajor>.*' })
+Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
 -- NvimTree.
@@ -44,7 +44,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 -- Treesitter.
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'tree-sitter/tree-sitter-go'
 
 -- Themes, schemes and icons.
@@ -53,6 +53,6 @@ Plug 'sainnhe/everforest'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'ryanoasis/vim-devicons'
 
-vim.fn.has('plug#end')
+vim.call('plug#end')
 
 -- TODO: """ Highlight whitespace and add final newline char.
