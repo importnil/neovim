@@ -56,7 +56,4 @@ cmp.setup({
     }
 })
 
-vim.cmd [[
-  set completeopt=menuone,noinsert,noselect
-  highlight! default link CmpItemKind CmpItemMenuDefault
-]]
+vim.opt.completeopt = 'menuone,noinsert,noselect'
