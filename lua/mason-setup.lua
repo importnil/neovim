@@ -11,15 +11,27 @@ require('mason').setup({
 
 require('mason-tool-installer').setup {
     ensure_installed = {
-	{ 'lua-language-server' },
+        { 'lua-language-server' },
         { 'golangci-lint', version = 'v1.47.3' },
-	{ 'golangci-lint-langserver' },
-	{ 'gopls' },
-	{ 'rust-analyzer' },
-	{ 'eslint-lsp' },
-	{ 'vim-language-server' },
-	{ 'json-lsp' },
-	{ 'yaml-language-server'},
+        { 'golangci-lint-langserver' },
+        { 'gopls' },
+        { 'rust-analyzer' },
+        { 'sqls' },
+        { 'eslint-lsp' },
+        { 'json-lsp' },
+        { 'html-lsp' },
+        { 'css-lsp' },
+        { 'cssmodules-language-server' },
+        { 'typescript-language-server' },
+        { 'python-lsp-server' },
+        { 'dockerfile-language-server' },
+        { 'terraform-ls' },
+        { 'vim-language-server' },
+        { 'yaml-language-server' },
+        { 'bash-language-server' },
+        { 'awk-language-server' },
+        { 'cmake-language-server' },
+        { 'clangd' },
     },
     auto_update = true,
     run_on_start = true,
@@ -100,11 +112,11 @@ require('mason-lspconfig').setup_handlers({
     ['rust_analyzer'] = function()
         lspconfig.rust_analyzer.setup {}
     end,
+    ['sqls'] = function()
+        lspconfig.sqls.setup {}
+    end,
     ['eslint'] = function()
         lspconfig.eslint.setup {}
-    end,
-    ['vimls'] = function()
-        lspconfig.vimls.setup {}
     end,
     ['jsonls'] = function()
         lspconfig.jsonls.setup {
@@ -161,6 +173,30 @@ require('mason-lspconfig').setup_handlers({
             }
         }
     end,
+    ['html'] = function()
+        lspconfig.html.setup {}
+    end,
+    ['cssls'] = function()
+        lspconfig.cssls.setup {}
+    end,
+    ['cssmodules_ls'] = function()
+        lspconfig.cssmodules_ls.setup {}
+    end,
+    ['tsserver'] = function()
+        lspconfig.tsserver.setup {}
+    end,
+    ['pylsp'] = function()
+        lspconfig.pylsp.setup {}
+    end,
+    ['dockerls'] = function()
+        lspconfig.dockerls.setup {}
+    end,
+    ['terraformls'] = function()
+        lspconfig.terraformls.setup {}
+    end,
+    ['vimls'] = function()
+        lspconfig.vimls.setup {}
+    end,
     ['yamlls'] = function()
         lspconfig.yamlls.setup {
             settings = {
@@ -176,5 +212,17 @@ require('mason-lspconfig').setup_handlers({
                 }
             }
         }
+    end,
+    ['bashls'] = function()
+        lspconfig.bashls.setup {}
+    end,
+    ['awk_ls'] = function()
+        lspconfig.awk_ls.setup {}
+    end,
+    ['cmake'] = function()
+        lspconfig.cmake.setup {}
+    end,
+    ['clangd'] = function()
+        lspconfig.clangd.setup {}
     end,
 })
