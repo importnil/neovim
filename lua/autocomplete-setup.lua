@@ -3,8 +3,12 @@ if (not status) then return end
 local lspkind = require 'lspkind'
 local luasnip = require('luasnip')
 
+require('nvim-autopairs').setup({
+    enable_check_bracket_line = false,
+    ignored_next_char = "[%w%.]",
+})
+
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-local cmp = require('cmp')
 cmp.event:on(
     'confirm_done',
     cmp_autopairs.on_confirm_done()
