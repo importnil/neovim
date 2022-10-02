@@ -1,6 +1,6 @@
-vim.api.nvim_create_autocmd({
+vim.api.nvim_create_autocmd('VimEnter', {
     command = [[if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) |  PlugInstall --sync | q |endif]]
-}, 'VimEnter')
+})
 
 -- Entrypoint for all plugins and configurations.
 require('core')
