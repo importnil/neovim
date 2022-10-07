@@ -23,6 +23,9 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'windwp/nvim-autopairs'
 
+-- Reopen files at last edited position.
+Plug 'farmergreg/vim-lastplace'
+
 -- Highlighter.
 Plug 'rrethy/vim-illuminate'
 
