@@ -7,7 +7,7 @@ RUN apt update \
     python3-venv npm
 
 # Install latest Go.
-RUN wget https://go.dev/dl/go1.19.1.linux-amd64.tar.gz && tar -C /usr/local -xzpvf go1.19.1.linux-amd64.tar.gz
+RUN wget https://go.dev/dl/go1.19.2.linux-amd64.tar.gz && tar -C /usr/local -xzpvf go1.19.2.linux-amd64.tar.gz
 
 # Build stable Neovim & Vim-Plug.
 RUN git clone https://github.com/neovim/neovim
