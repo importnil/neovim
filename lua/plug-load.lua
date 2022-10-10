@@ -10,3 +10,4 @@ require('tree')
 require('orgimports')
 require('nvim-autopairs').setup {}
 require('gitsigns').setup {}
+require('todo-comments').setup {}

@@ -29,6 +29,10 @@ Plug 'farmergreg/vim-lastplace'
 -- Highlighter.
 Plug 'rrethy/vim-illuminate'
 
+-- Notable comments highlighter.
+Plug 'nvim-lua/plenary.nvim'
+Plug 'folke/todo-comments.nvim'
+
 -- Snippets.
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
