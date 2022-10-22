@@ -33,6 +33,9 @@ Plug 'rrethy/vim-illuminate'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/todo-comments.nvim'
 
+-- Comment toggler.
+Plug 'terrortylor/nvim-comment'
+
 -- Snippets.
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
