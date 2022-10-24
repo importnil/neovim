@@ -11,4 +11,4 @@ require('orgimports')
 require('nvim-autopairs').setup {}
 require('gitsigns').setup {}
 require('todo-comments').setup {}
-require('nvim_comment').setup {}
+require('Comment').setup {}
