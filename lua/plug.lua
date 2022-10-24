@@ -34,7 +34,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/todo-comments.nvim'
 
 -- Comment toggler.
-Plug 'terrortylor/nvim-comment'
+Plug 'numToStr/Comment.nvim'
 
 -- Snippets.
 Plug 'L3MON4D3/LuaSnip'
