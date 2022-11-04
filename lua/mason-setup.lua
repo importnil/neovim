@@ -99,7 +99,6 @@ require('mason-lspconfig').setup_handlers({
                     completeUnimported = true,
                     matcher = 'fuzzy',
                     diagnosticsDelay = '500ms',
-                    experimentalWatchedFileDelay = '100ms',
                     symbolMatcher = 'fuzzy',
                     buildFlags = { '-tags', 'integration' },
                     gofumpt = true,
