@@ -37,32 +37,23 @@ require('mason-tool-installer').setup {
     run_on_start = true,
 }
 
-require('mason-lspconfig').setup {}
+local lsp = require('lsp')
 
--- General LSP configuration.
-local lsp_defaults = {
-    single_file_support = true,
-    flags = {
-        debounce_text_changes = 100,
-    },
-    capabilities = require('cmp_nvim_lsp').default_capabilities(
-        vim.lsp.protocol.make_client_capabilities()
-    ),
-    on_attach = function(client, bufnr)
-        require('navigator.lspclient.mapping').setup({ bufnr = bufnr, client = client })
-    end
-}
+require('mason-lspconfig').setup {}
 
 local lspconfig = require('lspconfig')
 
 lspconfig.util.default_config = vim.tbl_deep_extend(
     'force',
     lspconfig.util.default_config,
-    lsp_defaults
+    lsp
 )
 
 -- Server setup handlers.
 require('mason-lspconfig').setup_handlers({
+    ['jdtls'] = function()
+        lspconfig.jdtls.setup = function() end
+    end,
     ['sumneko_lua'] = function()
         lspconfig.sumneko_lua.setup {}
     end,
@@ -105,7 +96,7 @@ require('mason-lspconfig').setup_handlers({
                     experimentalPostfixCompletions = true,
                     staticcheck = true,
                 },
-            },
+            }
         }
     end,
     ['rust_analyzer'] = function()
