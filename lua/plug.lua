@@ -23,6 +23,9 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'windwp/nvim-autopairs'
 
+-- Java.
+Plug 'mfussenegger/nvim-jdtls'
+
 -- Reopen files at last edited position.
 Plug 'farmergreg/vim-lastplace'
 
@@ -44,8 +47,9 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 
--- Lualine.
-Plug 'nvim-lualine/lualine.nvim'
+-- Feline.
+Plug 'feline-nvim/feline.nvim'
+Plug 'Hitesh-Aggarwal/feline_theme.nvim'
 
 -- Git.
 Plug 'lewis6991/gitsigns.nvim'

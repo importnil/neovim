@@ -1,6 +1,6 @@
 -- Following plugin configurations.
 require('mason-setup')
-require('lualine-setup')
+require('feline')
 require('snippets')
 require('autocomplete-setup')
 require('navigator-setup')
