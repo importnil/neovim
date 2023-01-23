@@ -15,6 +15,9 @@ cmp.event:on(
 )
 
 cmp.setup({
+    completion = {
+        completeopt = 'menu,menuone,noinsert',
+    },
     snippet = {
         expand = function(args)
             luasnip.lsp_expand(args.body)
@@ -59,5 +62,3 @@ cmp.setup({
         })
     }
 })
-
-vim.opt.completeopt = 'menuone,noinsert,noselect'
