@@ -11,5 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - name: Prepare image tag
+      run: |
+        echo "IMAGE_TAG=ghcr.io/importnil/neovim:$(git rev-parse --short HEAD)" >> $GITHUB_ENV
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag $IMAGE_TAG
