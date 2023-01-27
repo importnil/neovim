@@ -14,7 +14,28 @@ cmp.event:on(
     cmp_autopairs.on_confirm_done()
 )
 
+local border = {
+    { "╭", "CmpBorder" },
+    { "─", "CmpBorder" },
+    { "╮", "CmpBorder" },
+    { "│", "CmpBorder" },
+    { "╯", "CmpBorder" },
+    { "─", "CmpBorder" },
+    { "╰", "CmpBorder" },
+    { "│", "CmpBorder" },
+}
+
 cmp.setup({
+    window = {
+        documentation = {
+            border = border,
+            winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
+        },
+        completion = {
+            border = border,
+            winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
+        }
+    },
     completion = {
         completeopt = 'menu,menuone,noinsert',
     },
