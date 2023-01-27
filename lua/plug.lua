@@ -32,6 +32,12 @@ Plug 'farmergreg/vim-lastplace'
 -- Highlighter.
 Plug 'rrethy/vim-illuminate'
 
+-- Wilder (cmdline autocompletion).
+Plug 'gelguy/wilder.nvim'
+
+-- FZY.
+Plug 'romgrk/fzy-lua-native'
+
 -- Notable comments highlighter.
 Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/todo-comments.nvim'
