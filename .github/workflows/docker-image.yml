@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      CR_TOKEN: ${{ secrets.CR_TOKEN }}
     steps:
     - uses: actions/checkout@v3
     - name: Prepare image tag
@@ -16,3 +18,5 @@ jobs:
         echo "IMAGE_TAG=ghcr.io/importnil/neovim:$(git rev-parse --short HEAD)" >> $GITHUB_ENV
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag $IMAGE_TAG
+    - name: Push the Docker image
+      run: echo $CR_TOKEN | docker login ghcr.io -u importnil --password-stdin && docker push $IMAGE_TAG
