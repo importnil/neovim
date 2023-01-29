@@ -21,5 +21,3 @@ USER user
 WORKDIR /home/user
 ENV PATH=$PATH:/usr/local/go/bin
 COPY --chown=user:user . /home/user/.config/nvim/
-
-ENTRYPOINT nvim
