@@ -1,7 +1,37 @@
 local status, cmp = pcall(require, 'cmp')
 if (not status) then return end
-local lspkind = require 'lspkind'
+local lspkind = require('lspkind')
 local luasnip = require('luasnip')
+
+lspkind.init({
+    symbol_map = {
+        Text = "",
+        Method = "",
+        Function = "",
+        Constructor = "",
+        Field = "",
+        Variable = "",
+        Class = "ﴯ",
+        Interface = "",
+        Module = "",
+        Property = "ﰠ",
+        Unit = "",
+        Value = "",
+        Enum = "",
+        Keyword = "",
+        Snippet = "",
+        Color = "",
+        File = "",
+        Reference = "",
+        Folder = "",
+        EnumMember = "",
+        Constant = "",
+        Struct = "",
+        Event = "",
+        Operator = "",
+        TypeParameter = ""
+    }
+})
 
 require('nvim-autopairs').setup({
     enable_check_bracket_line = false,
