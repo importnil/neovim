@@ -35,6 +35,10 @@ Plug 'rrethy/vim-illuminate'
 -- Wilder (cmdline autocompletion).
 Plug 'gelguy/wilder.nvim'
 
+-- FZF.
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
 -- FZY.
 Plug 'romgrk/fzy-lua-native'
 
@@ -52,6 +56,9 @@ Plug 'rafamadriz/friendly-snippets'
 -- NvimTree.
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
+
+-- Symbols Outline.
+Plug 'simrat39/symbols-outline.nvim'
 
 -- Feline.
 Plug 'feline-nvim/feline.nvim'
