@@ -24,6 +24,10 @@ vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+-- More natural split opening.
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 -- Misc.
 vim.opt.fileformats = 'unix,dos,mac'
 vim.opt.clipboard = 'unnamedplus'
@@ -46,9 +50,9 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Shell preference.
 if vim.fn.exists('$SHELL') then
-  vim.opt.shell = '$SHELL'
+    vim.opt.shell = '$SHELL'
 else
-  vim.opt.shell = '/bin/sh'
+    vim.opt.shell = '/bin/sh'
 end
 
 -- Blinking cursor.
