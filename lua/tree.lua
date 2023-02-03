@@ -8,19 +8,15 @@ require("nvim-tree").setup()
 require("nvim-tree").setup({
     sort_by = "case_sensitive",
     view = {
-        adaptive_size = true,
         mappings = {
             list = {
-                { key = "u", action = "dir_up" },
+                { key = "<C-e>", action = "" } -- Rewrite edit_in_place action to allow toggling.
             },
         },
     },
     renderer = {
         group_empty = true,
         highlight_git = true,
-    },
-    filters = {
-        dotfiles = true,
     },
     git = {
         enable = true,
