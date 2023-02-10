@@ -26,7 +26,7 @@ vim.cmd [[
     hi! link CmpItemKindUnit CmpItemKindKeyword
 ]]
 
--- Setup theme with custom colorscheme based on tokyonight-moon.
+-- Setup Feline with custom colorscheme based on tokyonight-moon.
 require('feline_theme').setup {
     fg = "#c8d3f5",
     bg = "#2f334d",
