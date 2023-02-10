@@ -11,18 +11,30 @@ require('mason').setup({
 
 require('mason-tool-installer').setup {
     ensure_installed = {
+        -- Lua.
         { 'lua-language-server' },
-        { 'golangci-lint', version = 'v1.47.3' },
+
+        -- Go.
+        { 'golangci-lint',             version = 'v1.47.3' },
         { 'golangci-lint-langserver' },
         { 'gopls' },
+        { 'gofumpt' },
+
+        -- Rust.
         { 'rust-analyzer' },
-        { 'sqls' },
+        { 'rustfmt' },
+
+        -- Frontend related.
         { 'eslint-lsp' },
         { 'json-lsp' },
         { 'html-lsp' },
         { 'css-lsp' },
         { 'cssmodules-language-server' },
         { 'typescript-language-server' },
+
+        -- Others.
+        { 'jdtls' },
+        { 'sqls' },
         { 'python-lsp-server' },
         { 'dockerfile-language-server' },
         { 'terraform-ls' },
