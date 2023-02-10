@@ -7,7 +7,6 @@ require('indent-blankline-setup')
 require('treesitter-setup')
 require('symbols-outline-setup')
 require('tree')
-require('orgimports')
 require('wilder-setup')
 require('nvim-autopairs').setup {}
 require('gitsigns').setup {}
