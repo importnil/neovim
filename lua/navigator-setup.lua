@@ -33,7 +33,7 @@ require('navigator').setup({
     lsp = {
         enable = true,
         disable_lsp = {
-            'sumneko_lua',
+            'lua_ls',
             'golangci_lint_ls',
             'gopls',
             'rust_analyzer',
