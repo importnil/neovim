@@ -15,7 +15,7 @@ require('mason-tool-installer').setup {
         { 'lua-language-server' },
 
         -- Go.
-        { 'golangci-lint',             version = 'v1.47.3' },
+        { 'golangci-lint',             version = 'v1.53.3' },
         { 'golangci-lint-langserver' },
         { 'gopls' },
         { 'gofumpt' },
@@ -34,7 +34,7 @@ require('mason-tool-installer').setup {
 
         -- Others.
         { 'jdtls' },
-        { 'sqls' },
+        { 'sqlls' },
         { 'python-lsp-server' },
         { 'dockerfile-language-server' },
         { 'terraform-ls' },
@@ -66,8 +66,8 @@ require('mason-lspconfig').setup_handlers({
     ['jdtls'] = function()
         lspconfig.jdtls.setup = function() end
     end,
-    ['sumneko_lua'] = function()
-        lspconfig.sumneko_lua.setup {}
+    ['lua_ls'] = function()
+        lspconfig.lua_ls.setup {}
     end,
     ['golangci_lint_ls'] = function()
         lspconfig.golangci_lint_ls.setup {}
@@ -114,8 +114,8 @@ require('mason-lspconfig').setup_handlers({
     ['rust_analyzer'] = function()
         lspconfig.rust_analyzer.setup {}
     end,
-    ['sqls'] = function()
-        lspconfig.sqls.setup {}
+    ['sqlls'] = function()
+        lspconfig.sqlls.setup {}
     end,
     ['eslint'] = function()
         lspconfig.eslint.setup {}
