@@ -48,12 +48,6 @@ vim.opt.termguicolors = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- Shell preference.
-if vim.fn.exists('$SHELL') then
-    vim.opt.shell = '$SHELL'
-else
-    vim.opt.shell = '/bin/sh'
-end
-
 -- Blinking cursor.
-vim.opt.guicursor = 'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250,sm:block-blinkwait175-blinkoff150-blinkon175'
+vim.opt.guicursor =
+'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250,sm:block-blinkwait175-blinkoff150-blinkon175'
