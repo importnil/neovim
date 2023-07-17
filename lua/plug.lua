@@ -65,7 +65,9 @@ Plug 'feline-nvim/feline.nvim'
 Plug 'Hitesh-Aggarwal/feline_theme.nvim'
 
 -- Git.
+Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'f-person/git-blame.nvim'
 
 -- Indentation guides.
 Plug 'lukas-reineke/indent-blankline.nvim'
@@ -79,6 +81,11 @@ Plug('folke/tokyonight.nvim', { ['branch'] = 'main' })
 Plug 'sainnhe/everforest'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'ryanoasis/vim-devicons'
+
+-- ChatGPT.
+Plug 'MunifTanjim/nui.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'dpayne/CodeGPT.nvim'
 
 vim.call('plug#end')
 
