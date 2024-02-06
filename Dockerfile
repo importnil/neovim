@@ -6,13 +6,13 @@ RUN apt update \
     git curl wget g++ unzip ninja-build gettext libtool libtool-bin autoconf automake cmake pkg-config doxygen python3-venv npm
 
 # Install Neovim (nightly).
-RUN wget https://github.com/neovim/neovim/releases/download/v0.9.1/nvim.appimage && chmod +x nvim.appimage
+RUN wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage && chmod +x nvim.appimage
 RUN ./nvim.appimage --appimage-extract
 # RUN mv squashfs-root /
 RUN ln -s /squashfs-root/AppRun /usr/bin/nvim
 
 # Install latest Go.
-RUN wget https://go.dev/dl/go1.20.6.linux-amd64.tar.gz && tar -C /usr/local -xzpvf go1.20.6.linux-amd64.tar.gz
+RUN wget https://go.dev/dl/go1.21.6.linux-amd64.tar.gz && tar -C /usr/local -xzpvf go1.21.6.linux-amd64.tar.gz
 
 # Setup context.
 RUN useradd -ms /bin/bash user
