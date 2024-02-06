@@ -10,7 +10,6 @@ require('navigator').setup({
     height = 0.3,
     preview_height = 0.35,
     border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
-    ts_fold = false,
     default_mapping = true,
     keymaps = {
         {
