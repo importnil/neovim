@@ -1,19 +1,23 @@
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
--- empty setup using defaults
-require("nvim-tree").setup()
+local function on_attach(bufnr)
+    local api = require "nvim-tree.api"
 
--- OR setup with some options
+    local function opts(desc)
+        return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+    end
+
+    -- default mappings
+    api.config.mappings.default_on_attach(bufnr)
+
+    -- custom mappings
+    vim.keymap.set('n', '<C-e>', api.tree.toggle, opts('Toggle File Tree'))
+end
+
 require("nvim-tree").setup({
+    on_attach = on_attach,
     sort_by = "case_sensitive",
-    view = {
-        mappings = {
-            list = {
-                { key = "<C-e>", action = "" } -- Rewrite edit_in_place action to allow toggling.
-            },
-        },
-    },
     renderer = {
         group_empty = true,
         highlight_git = true,
