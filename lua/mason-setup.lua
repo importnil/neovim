@@ -15,7 +15,7 @@ require('mason-tool-installer').setup {
         { 'lua-language-server' },
 
         -- Go.
-        { 'golangci-lint',             version = 'v1.53.3' },
+        { 'golangci-lint', version = 'v1.55.2' },
         { 'golangci-lint-langserver' },
         { 'gopls' },
         { 'gofumpt' },
