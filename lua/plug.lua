@@ -83,9 +83,7 @@ Plug 'cormacrelf/vim-colors-github'
 Plug 'ryanoasis/vim-devicons'
 
 -- ChatGPT.
-Plug 'MunifTanjim/nui.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'dpayne/CodeGPT.nvim'
+Plug 'robitx/gp.nvim'
 
 vim.call('plug#end')
 

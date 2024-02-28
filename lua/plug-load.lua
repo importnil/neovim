@@ -12,3 +12,4 @@ require('nvim-autopairs').setup {}
 require('gitsigns').setup {}
 require('todo-comments').setup {}
 require('Comment').setup {}
+require('gp').setup {}
